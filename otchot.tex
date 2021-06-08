@@ -1,0 +1,78 @@
+\documentclass[12pt,a4paper]{scrartcl} 
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+\usepackage{misccorr}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\begin{document}
+{\LARGE \textit{Вариант 5}}\bigskip
+
+{\LARGE \textit{Тема: Написать калькулятор (четыре арифметических операции с возможностью их запоминания) – аналог стандартного калькулятора Windows.}}
+			
+\section{Ход работы}
+\label{sec:exp}
+
+\subsection{Код приложения}
+\label{sec:exp:code}
+\begin{verbatim}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b;
+    a = 0;
+    b = 0;
+    char s;
+
+    while (true) 
+    {
+      cin >> a >> s >> b;
+      {
+          switch (s)
+          {
+          case '*':
+              cout << a * b;
+              break;
+          case '/':
+              cout << a / b;
+              break;
+          case '-':
+              cout << a - b;
+              break;
+          case '+':
+              cout << a + b;
+              break;
+          case '1':
+              return 0;
+          default:
+              return 0;
+          }
+      }
+    }
+}
+\end{verbatim}
+
+
+\section{Код в работающем состоянии}
+\label{sec:picexample}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.2\textwidth]{kod2.jpg}
+	\caption{Код}\label{fig:par}
+\end{figure}
+Работа кода представлена на рис.~\ref{fig:par}.
+
+\section{Библиографические ссылки}
+
+Для изучения «внутренностей» \TeX{} необходимо 
+изучить~\cite{andreyolegovich}, а для изучения Get лучше
+почитать~\cite{proglib.io}.Чтобы понять как работает калькулятор в си++, нужно обратится к~\cite{youtube}. 
+
+\begin{thebibliography}{9}
+\bibitem{andreyolegovich}Изучение \LaTeX{}. https://www.andreyolegovich.ru/PC/LaTeX.phpbase
+\bibitem{proglib.io}Изучение Get. https://proglib.io/p/git-for-half-an-hour/    
+\bibitem{youtube}Калькулятор. https://www.youtube.com/watch?v=jyDyqaCZvVs
+\end{thebibliography}
+
+\end{document}
